@@ -1,0 +1,24 @@
+Credentials cache: API:1FEF6E35-4A3F-4A06-853F-B0808E5BD6F1
+        Principal: mbuntubw@42LISBOA.COM
+
+  Issued                Expires               Principal
+Jan  4 16:57:27 2021  Jan  5 02:57:27 2021  krbtgt/42LISBOA.COM@42LISBOA.COM
+
+
+Credentials cache: API:5EED4AAB-0192-471B-B27D-1D954D28B2B2
+        Principal: mbuntubw@42LISBOA.COM
+
+  Issued                Expires               Principal
+Jan  4 16:44:23 2021  Jan  5 02:44:23 2021  krbtgt/42LISBOA.COM@42LISBOA.COM
+
+
+Credentials cache: API:A5948873-EB7B-43A5-8474-500D4B520E62
+        Principal: mbuntubw@42LISBOA.COM
+
+  Issued                Expires               Principal
+Jan  4 15:14:27 2021  Jan  5 01:14:27 2021  krbtgt/42LISBOA.COM@42LISBOA.COM
+Jan  4 15:14:29 2021  Jan  5 01:14:27 2021  HTTP/student-storage.42lisboa.com@42LISBOA.COMCredentials cache: API:1FEF6E35-4A3F-4A06-853F-B0808E5BD6F1
+        Principal: mbuntubw@42LISBOA.COM
+
+  Issued                Expires               Principal
+Jan  4 16:57:27 2021  Jan  5 02:57:27 2021  krbtgt/42LISBOA.COM@42LISBOA.COM
