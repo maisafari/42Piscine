@@ -1,42 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/04 13:27:02 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/04 13:33:08 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char	*ft_strdup(char *src)
+int	ft_strcmp(char *s1, char *s2)
 {
-	char	*str;
-	int		size;
-	int		count;
-
-	size = 0;
+	while (*s1 != '\0' && (*s1 == *s2))
 	{
-		pj
-		
+		s1++;
+		s2++;
 	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
-		return (NULL);
-	}
-	while (src[count])
-	{
-		str[count] = src[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
+	return (*(unsigned char*)s1 - *(unsigned char*)s2);
 }

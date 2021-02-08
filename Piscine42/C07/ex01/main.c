@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/02 20:23:45 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/02 20:47:54 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
-{
-	char	*str;
-	int		size;
-	int		count;
+int	*ft_range(int min, int max);
 
-	size = 0;
-	{
-		pj
-		
+int     main(void)
+{    
+	int *test;
+	int i;
+	i = 0;
+	test = ft_range(0, 1001);
+	while(i< 1001+0+1)
+    {
+		printf("%d\n", test[i]);
+		i++;
 	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
-		return (NULL);
-	}
-	while (src[count])
-	{
-		str[count] = src[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
+    return (0);
 }

@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/03 18:49:55 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/03 19:18:47 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 
-char	*ft_strdup(char *src)
+#include "ft_boolean.h"
+
+void	ft_putstr(char *str)
 {
-	char	*str;
-	int		size;
-	int		count;
+	while (*str)
+		write(1, str++, 1);
+}
+t_bool	ft_is_even(int nbr)
+{
+	return ((EVEN(nbr)) ? TRUE : FALSE);
+}
+int		main(int argc, char **argv)
+{
+	(void)argv;
 
-	size = 0;
-	{
-		pj
-		
-	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
-		return (NULL);
-	}
-	while (src[count])
-	{
-		str[count] = src[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
+	if (ft_is_even(argc - 1) == TRUE)
+		ft_putstr(EVEN_MSG);
+	else
+		ft_putstr(ODD_MSG);
+	return (SUCCESS);
 }

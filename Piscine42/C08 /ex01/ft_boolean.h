@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/03 18:46:59 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/03 20:22:18 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-char	*ft_strdup(char *src)
-{
-	char	*str;
-	int		size;
-	int		count;
+# include <unistd.h>
+# define TRUE 1
+# define FALSE 0
+# define SUCCESS 0
+# define EVEN_MSG "I have an even number of arguments."
+# define ODD_MSG "I have an odd number of arguments."
+# define EVEN(nbr) (nbr % 2 == 0)? (TRUE) : (FALSE)
 
-	size = 0;
-	{
-		pj
-		
-	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
-		return (NULL);
-	}
-	while (src[count])
-	{
-		str[count] = src[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
-}
+typedef unsigned int	t_bool;
+void	ft_putstr(char *str);
+t_bool	ft_is_even(int nbr);
+
+#endif

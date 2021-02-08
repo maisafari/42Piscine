@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/03 20:32:05 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/03 20:32:07 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 
-char	*ft_strdup(char *src)
+#include "ft_abs.h"
+
+int	main(void)
 {
-	char	*str;
-	int		size;
-	int		count;
+	int	index;
 
-	size = 0;
+	index = -5;
+	while (index < 5)
 	{
-		pj
-		
+		printf("macros::abs(%d) = %d\n", index, ABS(index));
+		index++;
 	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
-		return (NULL);
-	}
-	while (src[count])
-	{
-		str[count] = src[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
 }

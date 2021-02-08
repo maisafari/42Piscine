@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/03 20:36:45 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/03 20:50:05 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "ft_point.h"
+#include <stdio.h>
 
-char	*ft_strdup(char *src)
+void	set_point(t_point *point)
 {
-	char	*str;
-	int		size;
-	int		count;
+	point->x = 42;
+	point->y = 21;
+}
 
-	size = 0;
-	{
-		pj
-		
-	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
-		return (NULL);
-	}
-	while (src[count])
-	{
-		str[count] = src[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
+int		main(void)
+{
+	t_point		point;
+	
+	set_point(&point);
+	printf("%d", (&point)->y);
+	return (0);
 }

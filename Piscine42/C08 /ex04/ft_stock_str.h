@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_stock_str.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/03 22:12:00 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/03 23:17:10 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#ifndef FT_STOCK_STR_H
+# define FT_STOCK_STR_H
 
-char	*ft_strdup(char *src)
+
+
+
+typedef	struct		 s_stock_str
 {
-	char	*str;
 	int		size;
-	int		count;
+	char	*str;
+	char	*copy;
+}					t_stock_str;
 
-	size = 0;
-	{
-		pj
-		
-	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
-		return (NULL);
-	}
-	while (src[count])
-	{
-		str[count] = src[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
-}
+int					ft_string_size(char *str);
+char				*ft_strcp(char *str);
+void				ft_print_str(char *str);
+void 				ft_print_num(int n);
+struct s_stock_str *ft_strs_to_tab(int ac, char **av);
+void 				ft_show_tab(struct s_stock_str *par);
+
+#endif

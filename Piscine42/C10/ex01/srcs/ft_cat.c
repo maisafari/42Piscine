@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_cat.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/04 14:11:04 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/04 14:44:12 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "ft_cat.h"
 
-char	*ft_strdup(char *src)
+void	ft_put_err(char *str)
 {
-	char	*str;
-	int		size;
-	int		count;
+	char *charptr;
 
-	size = 0;
+	charptr = str;
+	while (*charptr)
 	{
-		pj
-		
+		write(2, charptr++, 1);
 	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
-		return (NULL);
-	}
-	while (src[count])
-	{
-		str[count] = src[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
+}
+
+void	ft_print_stdin(void)
+{
+	char buf;
+
+	while (read(STDIN_FILENO, &buf, 1))
+		write(1, &buf, 1);
+}
+
+void	inval_param(char *arg)
+{
+	ft_put_err("ft_cat: ");
+	ft_put_err(arg);
+	ft_put_err(": No such file or directory\n");
 }

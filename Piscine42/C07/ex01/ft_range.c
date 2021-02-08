@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/02 18:58:30 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/02 20:41:52 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
+int	*ft_range(int min, int max)
 {
-	char	*str;
-	int		size;
-	int		count;
+	int *arr;
+	int size;
 
-	size = 0;
-	{
-		pj
-		
-	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
+	size = (max - min) + 1;
+	if ((min >= max) || (!(arr = (int*)malloc((size) * sizeof(int)))))
 		return (NULL);
-	}
-	while (src[count])
+	size = 0;
+	while (min <= max)
 	{
-		str[count] = src[count];
-		count++;
+		arr[size] = min;
+		size++;
+		min++;
 	}
-	str[count] = '\0';
-	return (str);
+	return (arr);
 }

@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 22:56:25 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/02 20:22:48 by mariza           ###   ########.fr       */
+/*   Created: 2021/02/04 14:19:29 by mariza            #+#    #+#             */
+/*   Updated: 2021/02/04 14:45:01 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "ft_cat.h"
 
-char	*ft_strdup(char *src)
+int		main(int argc, char **argv)
 {
-	char	*str;
-	int		size;
-	int		count;
+	int		fd;
+	int		i;
+	char	buf;
 
-	size = 0;
-	{
-		pj
-		
-	}
-	count = 0;
-	while (src[size])
-	{
-		size++;
-	}
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-	{
-		return (NULL);
-	}
-	while (src[count])
-	{
-		str[count] = src[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
+	i = 1;
+	if (argc == 1)
+		ft_print_stdin();
+	else
+		while (i < argc)
+		{
+			if ((fd = open(argv[i], O_RDONLY)) < 0)
+				inval_param(argv[i]);
+			else
+			{
+				while (read(fd, &buf, 1))
+					write(1, &buf, 1);
+			}
+			i++;
+			close(fd);
+		}
+	return (0);
 }
