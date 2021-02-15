@@ -2,13 +2,15 @@ NAME = libft.a
 HEAD = libft.h
 SRC = ft_memset.c\
 		ft_bzero.c\
+		ft_strlcat.c\
+
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-				@ar rc $(NAME) $(OBJ)
+				@ar -rc $(NAME) $(OBJ)
 				@echo "$(NAME) created"
 				@ranlib $(NAME)
 				@echo "$(NAME) indexed"
