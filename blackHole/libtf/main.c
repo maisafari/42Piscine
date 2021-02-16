@@ -5,6 +5,7 @@
 
 int main (void) 
 {
+<<<<<<< HEAD
    char *str;
    char *ptr;
 
@@ -23,6 +24,23 @@ int main (void)
    }
    strcpy(str,"This is string.h library function");
    puts(str);
+=======
+	char *str;
+	char *ptr;
+
+	if (!(str = (char *)malloc(sizeof(char)* 50)))
+	{
+		printf("%s", "erro mem str");
+		return(-1);
+	}
+	if (!(ptr = (char *)malloc(sizeof(char)* 50)))
+	{
+		printf("%s", "erro mem ptr");
+		return(-2);
+	}
+	strcpy(str,"This is string.h library function");
+	puts(str);
+>>>>>>> 8ee8edc6e8a43475ad63d470196cc4a062673e62
 
 	//printf("%s\n", ptr);
 //	memset(str,'$',3);
@@ -53,6 +71,7 @@ int main (void)
 	/*ptr= ft_memchr(str, 'y', 50);
 		   printf(" %s\n", ptr);*/
 
+<<<<<<< HEAD
 	/*strcpy(ptr,"This is string.h library function");
 	printf("%s\n", ptr);
 	printf("%d", ft_memcmp(str, ptr, 50));*/
@@ -70,5 +89,17 @@ int main (void)
 	free(str);
 	
 
+=======
+   //ft_memset(str,'$',3);
+  // ptr = &(str[3]);
+   //ft_bzero(ptr, 4);
+  /* strcpy(ptr,"THIS IS PTR");
+   printf("%s\n", ptr);
+   printf("%lu\n",  ft_strlcat(ptr, str, 50));
+   printf("%lu\n", strlen(ptr));
+   */
+ //printf("%s\n", ft_strchr(str, 0));
+//printf("%s\n", ft_strrchr(str, 0));
+>>>>>>> 8ee8edc6e8a43475ad63d470196cc4a062673e62
    return(0);
 }

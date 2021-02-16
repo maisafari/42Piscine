@@ -2,6 +2,7 @@ NAME = libft.a
 HEAD = libft.h
 SRC =	ft_memset.c\
 		ft_bzero.c\
+<<<<<<< HEAD
 		ft_memcpy.c\
 		ft_memccpy.c\
 		ft_memmove.c\
@@ -13,6 +14,10 @@ SRC =	ft_memset.c\
 		ft_strchr.c\
 		ft_strnstr.c\
 		ft_strlcat.c\
+=======
+		ft_strlcat.c\
+
+>>>>>>> 8ee8edc6e8a43475ad63d470196cc4a062673e62
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Werror -Wextra
 
