@@ -6,7 +6,7 @@
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 17:35:31 by mbuntubw          #+#    #+#             */
-/*   Updated: 2021/02/16 17:58:26 by mariza           ###   ########.fr       */
+/*   Updated: 2021/02/16 18:09:16 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 *Strlcat() returns the lenght of the string it created. That means the length of
 * dst puls the length of src.*/
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstlen)
 {
 	char	*result;
 	size_t	s_len;
@@ -39,14 +39,14 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	size_t	aux;
 
 	s_len = ft_strlen((char *)src);
-	if (!(result = (char *)malloc((dstsize + s_len) * sizeof(char))))
+	if (!(result = (char *)malloc((dstlen + s_len) * sizeof(char))))
 		return (-1);
 	len = 0;
-	if (len < dstsize)
+	if (len < dstlen)
 		while (dst[len++] != '\0')
 			result[len] = dst[len];
 	aux = 0;
-	while (src[aux++] != '\0' && len++ < (dstsize + s_len))
+	while (src[aux++] != '\0' && len++ < (dstlen + s_len))
 		result[len] = src[aux];
 	result[len] = '\0';
 	dst = (char *restrict)result;

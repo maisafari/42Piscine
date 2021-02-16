@@ -1,5 +1,6 @@
 
 #include "libft.h"
+#include <bsd/string.h>
 
 
 int main (void) 
@@ -58,13 +59,14 @@ int main (void)
 	
 	//printf("%ld", ft_strlen(str));
 	//printf("%ld", ft_strlcpy(ptr, str, 9));
-	  /* strcpy(ptr,"THIS IS PTR");
+	/*  strcpy(ptr,"THIS IS PTR");
    printf("%s\n", ptr);
-   printf("%lu\n",  ft_strlcat(ptr, str, 50));
-   printf("%lu\n", strlen(ptr));
+  printf("%lu\n",  ft_strlcat(ptr, str, 50));
+  // printf("%lu\n", strlcat(ptr,str,50));
    */
  //printf("%s\n", ft_strchr(str, 0));
 //printf("%s\n", ft_strrchr(str, 0));
+	printf("%s",ft_strnstr(str, "lib",20));
 	free(str);
 	
 

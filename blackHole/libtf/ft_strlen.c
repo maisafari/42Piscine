@@ -6,7 +6,7 @@
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 20:12:20 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/13 20:28:20 by mariza           ###   ########.fr       */
+/*   Updated: 2021/02/16 21:39:19 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ size_t		ft_strlen(const char *s)
 	len = 0;
 	while (s[len] != '\0')
 		len++;
-	return(len);
+	return (len);
 }

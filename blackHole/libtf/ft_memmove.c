@@ -6,11 +6,12 @@
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 18:39:15 by mariza            #+#    #+#             */
-/*   Updated: 2021/02/13 19:12:44 by mariza           ###   ########.fr       */
+/*   Updated: 2021/02/16 21:46:09 by mariza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*MEMMOVE
 ** copy memory area
 *SYNOPSIS
@@ -30,12 +31,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char *tmp;
 
-	if (!(tmp = (char*) malloc(n * sizeof(char))))
+	if (!(tmp = (char*)malloc(n * sizeof(char))))
 	{
-		return(NULL);
+		return (NULL);
 	}
 	ft_memcpy(tmp, src, n);
 	ft_memcpy(dest, tmp, n);
 	free(tmp);
-	return((char*)dest);
+	return ((char*)dest);
 }
