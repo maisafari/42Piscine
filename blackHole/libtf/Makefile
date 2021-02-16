@@ -1,14 +1,26 @@
 NAME = libft.a
 HEAD = libft.h
-SRC = ft_memset.c\
+SRC =	ft_memset.c\
 		ft_bzero.c\
+		ft_memcpy.c\
+		ft_memccpy.c\
+		ft_memmove.c\
+		ft_memchr.c\
+		ft_memcmp.c\
+		ft_strlen.c\
+		ft_strlcpy.c\
+		ft_strchr.c\
+		t_strrchr.c\
+		ft_strnstr.c\
+		 ft_strlcat.c\
+
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-				@ar rc $(NAME) $(OBJ)
+				@ar -rc $(NAME) $(OBJ)
 				@echo "$(NAME) created"
 				@ranlib $(NAME)
 				@echo "$(NAME) indexed"
@@ -18,7 +30,7 @@ $(NAME): $(OBJ)
 
 clean:
 				@rm -f $(OBJ)
-				@echo "OBJ deleted"
+				@echo "$(OBJ) deleted"
 
 fclean: clean
 				@rm -f $(NAME)
