@@ -6,7 +6,7 @@
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 17:35:31 by mbuntubw          #+#    #+#             */
-/*   Updated: 2021/03/02 18:22:07 by mariza           ###   ########.fr       */
+/*   Updated: 2021/03/04 19:15:20 by mbuntubw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t len;
 	size_t count;
 
-	if (*dst && ft_strlen(dst) >= size)
+	if (size == 0 || ft_strlen(dst) >= size)
 		return (size + ft_strlen(src));
 	len = ft_strlen(dst) + ft_strlen(src);
 	count = ft_strlen(dst);

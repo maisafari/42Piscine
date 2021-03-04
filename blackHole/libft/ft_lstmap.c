@@ -6,7 +6,7 @@
 /*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 17:36:37 by mariza            #+#    #+#             */
-/*   Updated: 2021/03/01 19:14:48 by mariza           ###   ########.fr       */
+/*   Updated: 2021/03/04 19:20:48 by mbuntubw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new;
 	t_list	*element;
 
+	new = NULL;
 	if (lst)
 	{
 		if (!((new) = ft_lstnew(f(lst->content))))

@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   get_next_line_utils.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mariza <mariza@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mbuntubw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/01 16:58:51 by mariza            #+#    #+#             */
-/*   Updated: 2021/03/04 19:32:56 by mbuntubw         ###   ########.fr       */
+/*   Created: 2021/03/04 14:11:40 by mbuntubw          #+#    #+#             */
+/*   Updated: 2021/03/04 14:19:46 by mbuntubw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_UTILS_H
+# define GET_NEXT_LINE_UTILS_H
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
-{
-	if (lst)
-	{
-		del(lst->content);
-		free(lst);
-	}
-	return ;
-}
+int		get_next_line(int fd, char **line);
+
+#endif
